@@ -2,9 +2,22 @@ package org.tgv.pojo;
 
 import java.sql.Timestamp;
 
-public class Admin {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+
+
+@Entity
+@Table(name="admin")
+public class Admin {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idAd;
+	
 	private String nombre;
 	private String cargo;
 	private Timestamp fechaCreacion;

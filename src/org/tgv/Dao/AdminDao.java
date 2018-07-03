@@ -6,11 +6,10 @@ import org.tgv.pojo.Admin;
 
 public interface AdminDao {
 
-	public boolean save(Admin admin);
+	public void save(Admin admin);
 	public List<Admin> buscarTodos();
 	public Admin buscarXId(int id);
 	public List<Admin> buscarXNombre(String nombre);
-	public boolean actualizar(Admin admin);
-	public boolean borrar(int idAd);
-	public int[] grabarTodos(List<Admin> admins);
+	public void actualizar(Admin admin);
+	public void borrar(int idAd);
 }

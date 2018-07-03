@@ -17,10 +17,10 @@ public class AdminService {
 	@Autowired
 	private AdminDao adminDao;
 
-	public boolean save(Admin admin) {
+	public void save(Admin admin) {
 		
 		admin.setFechaCreacion(new Timestamp(new Date().getTime()));
-		return adminDao.save(admin);
+		adminDao.save(admin);
 	}
 
 	public List<Admin> buscarTodos() {
@@ -39,9 +39,9 @@ public class AdminService {
 		
 	}
 
-	public boolean borrar(int idAd) {
+	public void borrar(int idAd) {
 
-		return adminDao.borrar(idAd);
+		adminDao.borrar(idAd);
 	}
 
 }
